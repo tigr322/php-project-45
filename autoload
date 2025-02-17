@@ -1,0 +1,21 @@
+1. Убедитесь, что в composer.json правильно указан autoload
+Откройте composer.json и проверьте секцию autoload:
+
+json
+Копировать
+Редактировать
+"autoload": {
+    "psr-4": {
+        "BrainGames\\": "src/"
+    }
+}
+Если BrainGames\\ не указывает на src/, исправьте.
+
+2. Сгенерируйте файл автозагрузки
+Выполните команду:
+
+sh
+Копировать
+Редактировать
+composer dump-autoload
+Она создаст (или обновит) файл vendor/autoload.php.

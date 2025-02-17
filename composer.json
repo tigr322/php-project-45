@@ -15,5 +15,8 @@
     },
     "bin": [
         "php-project-45/index"
-    ]
+    ],
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.11"
+    }
 }
