@@ -1,0 +1,42 @@
+#!/usr/bin/env php
+<?php
+
+
+require __DIR__ . '/vendor/autoload.php';
+
+use BrainGames\Cli\Greeting;
+
+Greeting::sayHello();
+\cli\line("What is the result of the expression?");
+$operations = ['+', '-', '*'];
+
+while(true) {
+    $num1 = random_int(1,100);
+    $num2 = random_int(1,100);
+    $operator = $operations[array_rand($operations)];
+    switch ($operator) {
+        case '+':
+            $correctAnswer = $num1 + $num2;
+            \cli\line("Question: $num1 + $num2");
+            break;
+        case '-':
+            $correctAnswer = $num1 - $num2;
+            \cli\line("Question: $num1 - $num2");
+            break;
+        case '*':
+            $correctAnswer = $num1 * $num2;
+            \cli\line("Question: $num1 * $num2");
+            break;
+    }
+    
+    $question = \cli\prompt("Your answer");
+    if ($question == $correctAnswer) {
+        \cli\line("Correct!");
+    }
+    else{
+        \cli\line("$question is wrong answer ;(. Correct answer was $correctAnswer");
+        \cli\line("Let's try again, $name");
+        return false;
+    }
+
+}

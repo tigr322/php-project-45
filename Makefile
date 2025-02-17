@@ -23,4 +23,6 @@ index:
 	./index
 validate:
 	composer validate
+brain-even:
+	./brain-even
 

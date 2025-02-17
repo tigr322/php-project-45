@@ -2,4 +2,3 @@ git status
 git add . some files
 git commit -m "Добавлены Makefile, composer.json и исполняемый файл"
 git push origin main
-
