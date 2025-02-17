@@ -15,7 +15,7 @@
     },
     "bin": [
         "php-project-45/index",
-         "php-project-45/brain-even"
+         "php-project-45/brain-calc"
     ],
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.11"
