@@ -3,10 +3,14 @@
     "description": "CLI application for brain games",
     "type": "project",
     "license": "MIT",
-    "require": {},
+    "require": {
+        "clip/clip": "^1.0",
+        "symfony/console": "^7.2",
+        "wp-cli/php-cli-tools": "^0.12.1"
+    },
     "autoload": {
         "psr-4": {
-            "Tigranadaman\\PhpProject45\\": "src/"
+            "BrainGames\\": "src/"
         }
     },
     "bin": [
